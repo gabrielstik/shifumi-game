@@ -1,0 +1,54 @@
+@import '_variables.scss';
+@import '_keyframes.scss';
+
+body {
+  background-color: $main-color;
+  overflow: hidden;
+}
+
+.intro {
+  position: absolute;
+  width: 100%;
+  margin-top: 40vh;
+
+  p {
+    color: red;
+    font-family: 'Lato';
+    font-size: 50px;
+  }
+
+  .play-buttons {
+    opacity: 0;
+    margin-top: 50px;
+
+    .play-button {
+      cursor: pointer;
+      margin-top: 20px;
+      color: white;
+      font-family: 'Lato';
+      font-size: 50px;
+      height: auto;
+      border-bottom: solid 10px $main-color;
+      transition: all .1s ease;
+    }
+
+    .play-button:hover {
+      border-bottom: solid 10px white;
+    }
+  }
+}
+
+
+/* ANIM */
+
+.anim-intro {
+  animation: intro 3s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+.anim-comeBut {
+  animation: comeBut 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
