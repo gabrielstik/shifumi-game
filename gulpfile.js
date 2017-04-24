@@ -67,12 +67,13 @@ gulp.task('styles', function () {
 gulp.task( 'javascript', function()
 {
     return gulp.src( [
-            './src/js/main.js',
+          config.src + 'js/*.js'
         ] )
         .pipe(gulp_plumber({
             errorHandler: gulp_notify.onError("JS Error: <%= error.message %>")}))
         .pipe(gulp_sourcemaps.init())
         .pipe( gulp_uglify() )
+        .pipe( gulp_concat( 'main.min.js' ) )
         .pipe(gulp_sourcemaps.write())
         .pipe( gulp.dest(config.assets + 'js' ) );
 } );
@@ -90,5 +91,5 @@ gulp.task('imagemin', function()
 gulp.task( 'watch', ['sass', 'javascript', 'imagemin'], function()
 {
     gulp.watch(config.src + 'scss/**/*.scss', ["sass"]);
-    gulp.watch(config.src + 'js/main.js', ["javascript"]);
+    gulp.watch(config.src + 'js/**/*.js', ["javascript"]);
 } );
