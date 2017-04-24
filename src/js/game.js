@@ -93,8 +93,21 @@ function solo(pressed) {
   setTimeout(function() {
     scoreP1.innerHTML=p1Score;
     scoreP2.innerHTML=p2Score;
-    p1Played.style.backgroundImage="url()";
-    p2Played.style.backgroundImage="url()";
-    round();
+    var opacity = 1;
+    var fadeOut = setInterval(function() {
+      opacity -= .03;
+      p1Played.style.opacity=opacity;
+      p2Played.style.opacity=opacity;
+      if (opacity <= 0) {
+        clearInterval(fadeOut);
+      }
+    },10);
+    setTimeout(function() {
+      p1Played.style.backgroundImage="url()";
+      p2Played.style.backgroundImage="url()";
+      p1Played.style.opacity="1";
+      p2Played.style.opacity="1";
+      round();
+    },1000);
   },3000);
 }
