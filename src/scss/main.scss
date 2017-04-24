@@ -58,14 +58,18 @@ body {
   margin-top: -400px;
   opacity: 1;
 
-  .anti-click {
+  .item-row-left {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 5%;
   }
 
-  .item-row {
-    width: 200px;
+  .item-row-right {
+    position: absolute;
+    right: 5%;
+  }
+
+  div[class^=item-row-] {
+    width: 170px;
     padding: 20px 0;
 
     .item-line {
@@ -114,6 +118,26 @@ body {
       }
     }
   }
+
+  .score {
+    width: 100%;
+    top: 10%;
+    left: 0;
+    position: absolute;
+    font-family: Lato;
+    font-size: 400px;
+    color: $third-color;
+    text-align: center;
+  }
+
+  .anti-click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
