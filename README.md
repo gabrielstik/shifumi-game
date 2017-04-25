@@ -5,7 +5,7 @@ School project: make a shifumi game
 - Solo mode & multi mode (only solo is working for now)
 
 ### Controls
-- *QSD* in solo mode
-- *QSD* & *KLM* in multi mode
+- **QSD** in solo mode
+- **QSD** & **KLM** in multi mode
 
-/More features coming soon/
+*More features coming soon*
