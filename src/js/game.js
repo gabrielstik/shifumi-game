@@ -1,4 +1,4 @@
-mode = '';
+mode = 'solo';
 scoreP1 = document.querySelector('.score-p1');
 scoreP2 = document.querySelector('.score-p2');
 p1Score = 0;
@@ -6,7 +6,9 @@ p2Score = 0;
 p1Played = document.querySelector('.played-p1');
 p2Played = document.querySelector('.played-p2');
 
-function round(mode) {
+round();
+
+function round() {
   p1Pressed = '';
   p2Pressed = '';
   if (mode == 'solo') {
