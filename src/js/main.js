@@ -11,11 +11,11 @@ var game = document.querySelector('.game');
 soloButton.addEventListener('click', function() {
   game.classList.add('anim-comeGame');
   anticlick.style.display="none";
-  mode = 'solo';
+  round('solo');
 },false);
 
 multiButton.addEventListener('click', function() {
   game.classList.add('anim-comeGame');
   anticlick.style.display="none";
-  mode = 'multi';
+  round('multi');
 },false);
